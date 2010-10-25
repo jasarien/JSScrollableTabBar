@@ -7,6 +7,7 @@
 //
 
 #import "JSTabButton.h"
+#import "UIImage+JSRetinaAdditions.h"
 
 @implementation JSTabButton
 
@@ -25,13 +26,13 @@
 	if (!normalButton)
 	{
 		NSLog(@"setting normal button");
-		normalButton = [[UIImage imageWithContentsOfFile:[imageBundle pathForResource:@"tabButtonNormal" ofType:@"png"]] stretchableImageWithLeftCapWidth:14 topCapHeight:0];
+		normalButton = [[UIImage imageWithContentsOfResolutionIndependentFile:[imageBundle pathForResource:@"tabButtonNormal" ofType:@"png"]] stretchableImageWithLeftCapWidth:14 topCapHeight:0];
 	}
 	
 	if (!highlightedButton)
 	{
 		NSLog(@"setting Highlighted button");
-		highlightedButton = [[UIImage imageWithContentsOfFile:[imageBundle pathForResource:@"tabButtonHighlighted" ofType:@"png"]] stretchableImageWithLeftCapWidth:14 topCapHeight:0];
+		highlightedButton = [[UIImage imageWithContentsOfResolutionIndependentFile:[imageBundle pathForResource:@"tabButtonHighlighted" ofType:@"png"]] stretchableImageWithLeftCapWidth:14 topCapHeight:0];
 	}
 	
 	JSTabButton *button = (JSTabButton *)[self buttonWithType:UIButtonTypeCustom];

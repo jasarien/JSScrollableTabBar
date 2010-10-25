@@ -16,6 +16,8 @@
 		75359DF61275999100614700 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75359DF51275999100614700 /* CoreGraphics.framework */; };
 		75359DF81275999100614700 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75359DF71275999100614700 /* QuartzCore.framework */; };
 		75359DFA1275999100614700 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75359DF91275999100614700 /* UIKit.framework */; };
+		75C940121275D32D000B6F2F /* UIImage+JSRetinaAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 75C940101275D32D000B6F2F /* UIImage+JSRetinaAdditions.h */; };
+		75C940131275D32D000B6F2F /* UIImage+JSRetinaAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C940111275D32D000B6F2F /* UIImage+JSRetinaAdditions.m */; };
 		AA747D9F0F9514B9006C5449 /* JSScrollableTabBar_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* JSScrollableTabBar_Prefix.pch */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
 /* End PBXBuildFile section */
@@ -31,6 +33,8 @@
 		75359DF51275999100614700 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		75359DF71275999100614700 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		75359DF91275999100614700 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		75C940101275D32D000B6F2F /* UIImage+JSRetinaAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+JSRetinaAdditions.h"; sourceTree = "<group>"; };
+		75C940111275D32D000B6F2F /* UIImage+JSRetinaAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+JSRetinaAdditions.m"; sourceTree = "<group>"; };
 		AA747D9E0F9514B9006C5449 /* JSScrollableTabBar_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSScrollableTabBar_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D2AAC07E0554694100DB518D /* libJSScrollableTabBar.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libJSScrollableTabBar.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,6 +95,8 @@
 				75359DCC127598A600614700 /* JSTabItem.m */,
 				75359DC7127598A600614700 /* JSTabButton.h */,
 				75359DC8127598A600614700 /* JSTabButton.m */,
+				75C940101275D32D000B6F2F /* UIImage+JSRetinaAdditions.h */,
+				75C940111275D32D000B6F2F /* UIImage+JSRetinaAdditions.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -114,6 +120,7 @@
 				75359DCD127598A600614700 /* JSTabButton.h in Headers */,
 				75359DCF127598A600614700 /* JSScrollableTabBar.h in Headers */,
 				75359DD1127598A600614700 /* JSTabItem.h in Headers */,
+				75C940121275D32D000B6F2F /* UIImage+JSRetinaAdditions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,6 +180,7 @@
 				75359DCE127598A600614700 /* JSTabButton.m in Sources */,
 				75359DD0127598A600614700 /* JSScrollableTabBar.m in Sources */,
 				75359DD2127598A600614700 /* JSTabItem.m in Sources */,
+				75C940131275D32D000B6F2F /* UIImage+JSRetinaAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

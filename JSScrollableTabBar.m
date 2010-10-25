@@ -7,6 +7,7 @@
 //
 #import "JSScrollableTabBar.h"
 #import "JSTabButton.h"
+#import "UIImage+JSRetinaAdditions.h"
 
 @interface JSScrollableTabBar ()
 
@@ -74,22 +75,22 @@
 	switch (self.style)
 	{
 		case JSScrollableTabBarStyleBlue:
-			backgroundImage = [[UIImage imageWithContentsOfFile:[imageBundle pathForResource:@"barBackgroundBlue" ofType:@"png"]] stretchableImageWithLeftCapWidth:1
-																																					  topCapHeight:0];
-			fadeLeft = [UIImage imageWithContentsOfFile:[imageBundle pathForResource:@"fadeLeft_blue" ofType:@"png"]];
-			fadeRight = [UIImage imageWithContentsOfFile:[imageBundle pathForResource:@"fadeRight_blue" ofType:@".png"]];
+			backgroundImage = [[UIImage imageWithContentsOfResolutionIndependentFile:[imageBundle pathForResource:@"barBackgroundBlue" ofType:@"png"]] stretchableImageWithLeftCapWidth:1
+																																										   topCapHeight:0];
+			fadeLeft = [UIImage imageWithContentsOfResolutionIndependentFile:[imageBundle pathForResource:@"fadeLeft_blue" ofType:@"png"]];
+			fadeRight = [UIImage imageWithContentsOfResolutionIndependentFile:[imageBundle pathForResource:@"fadeRight_blue" ofType:@"png"]];
 			break;
 		case JSScrollableTabBarStyleBlack:
-			backgroundImage = [[UIImage imageWithContentsOfFile:[imageBundle pathForResource:@"barBackgroundBlack" ofType:@"png"]] stretchableImageWithLeftCapWidth:1
-																																					  topCapHeight:0];
-			fadeLeft = [UIImage imageWithContentsOfFile:[imageBundle pathForResource:@"fadeLeft_black" ofType:@"png"]];
-			fadeRight = [UIImage imageWithContentsOfFile:[imageBundle pathForResource:@"fadeRight_black" ofType:@"png"]];
+			backgroundImage = [[UIImage imageWithContentsOfResolutionIndependentFile:[imageBundle pathForResource:@"barBackgroundBlack" ofType:@"png"]] stretchableImageWithLeftCapWidth:1
+																																											topCapHeight:0];
+			fadeLeft = [UIImage imageWithContentsOfResolutionIndependentFile:[imageBundle pathForResource:@"fadeLeft_black" ofType:@"png"]];
+			fadeRight = [UIImage imageWithContentsOfResolutionIndependentFile:[imageBundle pathForResource:@"fadeRight_black" ofType:@"png"]];
 			break;
 		case JSScrollableTabBarStyleTransparent:
-			backgroundImage = [[UIImage imageWithContentsOfFile:[imageBundle pathForResource:@"barBackgroundTrans" ofType:@"png"]] stretchableImageWithLeftCapWidth:1
-																																					   topCapHeight:0];
-			fadeLeft = [UIImage imageWithContentsOfFile:[imageBundle pathForResource:@"fadeLeft_trans" ofType:@"png"]];
-			fadeRight = [UIImage imageWithContentsOfFile:[imageBundle pathForResource:@"fadeRight_trans" ofType:@"png"]];
+			backgroundImage = [[UIImage imageWithContentsOfResolutionIndependentFile:[imageBundle pathForResource:@"barBackgroundTrans" ofType:@"png"]] stretchableImageWithLeftCapWidth:1
+																																											topCapHeight:0];
+			fadeLeft = [UIImage imageWithContentsOfResolutionIndependentFile:[imageBundle pathForResource:@"fadeLeft_trans" ofType:@"png"]];
+			fadeRight = [UIImage imageWithContentsOfResolutionIndependentFile:[imageBundle pathForResource:@"fadeRight_trans" ofType:@"png"]];
 			break;
 		default:
 			break;
@@ -127,7 +128,7 @@
 		
 		CGRect frame = [tabButton frame];
 		frame.origin.x = currentXposition;
-		frame.origin.y = (self.frame.size.height - frame.size.height) / 2;
+		frame.origin.y = abs((self.frame.size.height - frame.size.height) / 2);
 		[tabButton setFrame:frame];
 		
 		currentXposition = frame.origin.x + frame.size.width + padding;

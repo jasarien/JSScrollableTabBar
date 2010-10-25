@@ -61,11 +61,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75AFA41C12759B4D00447113 /* libJSScrollableTabBar.a in Frameworks */,
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */,
 				75DD053F126F50910025998A /* QuartzCore.framework in Frameworks */,
-				75AFA41C12759B4D00447113 /* libJSScrollableTabBar.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,6 +251,10 @@
 				GCC_VERSION = 4.2;
 				HEADER_SEARCH_PATHS = "$(SRCROOT)/..";
 				INFOPLIST_FILE = "ScrollableTabBar-Info.plist";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = ScrollableTabBar;
 			};
 			name = Debug;
@@ -262,7 +266,12 @@
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = ScrollableTabBar_Prefix.pch;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/..";
 				INFOPLIST_FILE = "ScrollableTabBar-Info.plist";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = ScrollableTabBar;
 				VALIDATE_PRODUCT = YES;
 			};
