@@ -1,0 +1,39 @@
+JSScrollableTabBar
+==================
+
+What is JSScrollableTabBar?
+---------------------------
+
+JSScrollableTabBar is a simple, refined tab bar UI control that resembles the TabStrip found in the popular Three20 library but without any of the dependencies.
+
+It is delegate based, allowing you to do anything you want when a tab is selected.
+
+JSScrollableTabBar has three styles to choose from so it can fit in with your app:
+
+[![](http://jamsoftonline.com/images/JSScrollableTabBar/black.png)](http://jamsoftonline.com/images/JSScrollableTabBar/black.png)
+
+[![](http://jamsoftonline.com/images/JSScrollableTabBar/trans.png)](http://jamsoftonline.com/images/JSScrollableTabBar/trans.png) 
+
+[![](http://jamsoftonline.com/images/JSScrollableTabBar/blue.png)](http://jamsoftonline.com/images/JSScrollableTabBar/blue.png)
+
+Adding JSScrollableTabBar to your project
+-----------------------------------------
+
+JSScrollableTabBar is compiled as a static library, and the easiest way to add it to your
+project is to use Xcode's "dependent project" facilities.  Here is how:
+
+1. Clone the JSScrollableTabBar git repository: `git clone git://github.com/jasarien/JSScrollableTabBar.git`.  Make sure you store the repository in a permanent place because Xcode will need to reference the files every time you compile your project.
+
+2. Locate the `JSScrollableTabBar.xcodeproj` file. Drag JSScrollableTabBar.xcodeproj and drop it onto the root of your Xcode project's "Groups and Files"  sidebar.  A dialog will appear -- make sure "Copy items" is unchecked and "Reference Type" is "Relative to Project" before clicking "Add".    
+
+3. Now you need to link the JSScrollableTabBar static libraries to your project.  Select the project item that you just added to the sidebar.  Under the "Details" table, you will see JSScrollableTabBar.a.  Check the checkbox on the far right for the `lib` file. This will link JSScrollableTabBar to your app.
+
+4. Now you need to add JSScrollableTabBar as a dependency of your project, so Xcode compiles it whenever you compile your project.  Expand the "Targets" section of the sidebar and double-click your application's target.  Under the "General" tab you will see a "Direct Dependencies" section. Click the `+` button, select "JSScrollableTabBar", and click "Add Target".
+
+5. Now you need to add the bundle of images to your app.  Locate `images.bundle` in the JSScrollableTabBar directory and drag and drop it into your project.  A dialog will appear -- make sure "Create Folder References" is selected,  "Copy items" is unchecked, and "Reference Type" is "Relative to Project" before clicking "Add".
+
+6. Finally, we need to tell your project where to find the JSScrollableTabBar headers.  Open your "Project Settings" and go to the "Build" tab. Look for "Header Search Paths" and double-click it.  Add the relative path from your project's directory to the "JSScrollableTabBar" directory.
+
+9. While you are in Project Settings, go to "Other Linker Flags" under the "Linker" section, and add `-ObjC` and `-all_load` to the list of flags.
+
+10. You're ready to go.  Just `#import "JSScrollableTabBar.h"` anywhere you want to use JSScrollableTabBar in your project.
