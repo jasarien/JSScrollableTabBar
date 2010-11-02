@@ -9,4 +9,6 @@
 
 build/
 
+# Finder Config Files #
+#######################
 .DS_Store
