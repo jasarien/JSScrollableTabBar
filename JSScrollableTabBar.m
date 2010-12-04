@@ -128,7 +128,7 @@
 		
 		CGRect frame = [tabButton frame];
 		frame.origin.x = currentXposition;
-		frame.origin.y = abs((self.frame.size.height - frame.size.height) / 2);
+		frame.origin.y = abs((self.frame.size.height - frame.size.height) / 2) + 1;
 		[tabButton setFrame:frame];
 		
 		currentXposition = frame.origin.x + frame.size.width + padding;
