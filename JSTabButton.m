@@ -1,6 +1,5 @@
 //
-//  TRPNTokenButton.m
-//  TokenTest
+//  JSTabButton.m
 //
 //  Created by James Addyman on 29/04/2010.
 //  Copyright 2010 JamSoft. All rights reserved.

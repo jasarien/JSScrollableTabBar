@@ -1,6 +1,6 @@
 //
-//  TRPNUIImageAdditions.h
-//  Interstate
+//  UIImage+JSRetinaAdditions.h
+//  JSScrollableTabBar
 //
 //  Created by james on 16/07/2010.
 //  Copyright 2010 Truphone. All rights reserved.
