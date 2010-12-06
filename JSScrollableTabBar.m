@@ -31,6 +31,7 @@
 		_tabItems = [[NSMutableArray alloc] init];
 		
 		_background = [[UIImageView alloc] initWithFrame:frame];
+		[_background setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
 		[self addSubview:_background];
 		
 		_scrollView = [[UIScrollView alloc] initWithFrame:frame];
@@ -59,6 +60,15 @@
 {
 	[_tabItems release], _tabItems = nil;
     [super dealloc];
+}
+
+- (void)layoutSubviews
+{
+	[super layoutSubviews];
+	
+	CGRect fadeFrame = [_fadeRight frame];
+	fadeFrame.origin.x = self.frame.size.width - fadeFrame.size.width;
+	[_fadeRight setFrame:fadeFrame];
 }
 
 - (void)setStyle:(JSScrollableTabBarStyle)style

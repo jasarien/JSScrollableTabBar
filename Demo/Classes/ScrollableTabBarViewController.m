@@ -32,6 +32,7 @@
     [super viewDidLoad];
 	
 	_tabBar = [[[JSScrollableTabBar alloc] initWithFrame:CGRectMake(0, 0, 320, 44) style:JSScrollableTabBarStyleBlack] autorelease];
+	[_tabBar setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
 	[_tabBar setDelegate:self];
 	[self.view addSubview:_tabBar];
 	
@@ -83,15 +84,13 @@
 	[_label setText:[NSString stringWithFormat:@"Selected tab: %d", index]];
 }
 
-/*
-// Override to allow orientations other than the default portrait orientation.
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    // Return YES for supported orientations
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+	return YES;
 }
-*/
 
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning
+{
 	// Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];
 	
