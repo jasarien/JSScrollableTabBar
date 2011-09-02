@@ -14,7 +14,6 @@
 - (void)layoutTabs;
 - (void)updateFaders;
 - (void)tabSelected:(id)sender;
-- (void)selectTabAtIndex:(NSInteger)index;
 
 @end
 
