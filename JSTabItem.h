@@ -7,16 +7,21 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import <UIKit/uikit.h>
 
 @interface JSTabItem : NSObject {
-
+    
 	NSString *_title;
+    UIColor *_textColor;
+    UIColor *_color;
 	
 }
 
 @property (nonatomic, copy) NSString *title;
+@property (nonatomic, copy) UIColor *color;
+@property (nonatomic, copy) UIColor *textColor;
 
-- (id)initWithTitle:(NSString *)title;
+
+- (id)initWithTitle:(NSString *)title andColor:(UIColor*)color andTextColor:(UIColor*)textColor;
 
 @end
