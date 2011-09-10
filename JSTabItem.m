@@ -10,7 +10,7 @@
 #import <UIKit/uikit.h>
 
 @implementation JSTabItem
-
+    
 @synthesize title = _title;
 @synthesize color = _color;
 @synthesize textColor = _textColor;
