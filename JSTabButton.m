@@ -14,11 +14,11 @@
 @synthesize normalBg = _normalBg;
 @synthesize highlightedBg = _highlightedBg;
 
-+ (JSTabButton *)tabButtonWithTitle:(NSString *)string
++ (JSTabButton *)tabButtonWithTitle:(NSString *)string andColor:(UIColor*)color andTextColor:(UIColor*)textColor
 {	
 	NSString *imageBundlePath = [[[NSBundle mainBundle] bundlePath] stringByAppendingPathComponent:@"images.bundle"];
 	NSBundle *imageBundle = [NSBundle bundleWithPath:imageBundlePath];
-
+    
 	static UIImage *normalButton = nil;
 	static UIImage *highlightedButton = nil;
 	
@@ -35,15 +35,17 @@
 	}
 	
 	JSTabButton *button = (JSTabButton *)[self buttonWithType:UIButtonTypeCustom];
-	[button setNormalBg:normalButton];
-	[button setHighlightedBg:highlightedButton];
+	
 	[button setAdjustsImageWhenHighlighted:NO];
-	[button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [button setTitleColor:textColor forState:UIControlStateNormal];
+    [button setTitleColor:textColor forState:UIControlStateApplication];
+    [button setTitleColor:textColor forState:UIControlStateHighlighted];
+    
+    [button setBackgroundColor:color];
 	[[button titleLabel] setFont:[UIFont fontWithName:@"Helvetica-Bold" size:14]];
 	[button setTitleShadowColor:[UIColor whiteColor] forState:UIControlStateNormal];
-	[[button titleLabel] setShadowOffset:CGSizeMake(0.0, 0.5)];
+    
 	[[button titleLabel] setLineBreakMode:UILineBreakModeTailTruncation];
-	[button setTitleEdgeInsets:UIEdgeInsetsMake(0, 10, 0, 10)];
 	
 	[button setTitle:string forState:UIControlStateNormal];
 	

@@ -14,6 +14,7 @@
 - (void)layoutTabs;
 - (void)updateFaders;
 - (void)tabSelected:(id)sender;
+- (void)selectTabAtIndex:(NSInteger)index;
 
 @end
 
@@ -29,11 +30,11 @@
 	{
 		_tabItems = [[NSMutableArray alloc] init];
 		
-		_background = [[UIImageView alloc] initWithFrame:self.bounds];
+		_background = [[UIImageView alloc] initWithFrame:frame];
 		[_background setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
 		[self addSubview:_background];
 		
-		_scrollView = [[UIScrollView alloc] initWithFrame:self.bounds];
+		_scrollView = [[UIScrollView alloc] initWithFrame:frame];
 		[_scrollView setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
 		[_scrollView setShowsHorizontalScrollIndicator:NO];
 		[_scrollView setShowsVerticalScrollIndicator:NO];
@@ -129,7 +130,7 @@
 	
 	for (JSTabItem *item in _tabItems)
 	{
-		JSTabButton *tabButton = [JSTabButton tabButtonWithTitle:[item title]];
+		JSTabButton *tabButton = [JSTabButton tabButtonWithTitle:[item title] andColor:[item color] andTextColor:[item textColor]];
 		[tabButton setTag:[_tabItems indexOfObject:item]];
 		[tabButton addTarget:self
 					  action:@selector(tabSelected:)
@@ -146,7 +147,7 @@
 		
 		[_scrollView addSubview:tabButton];
 	}
-
+    
 	[_scrollView setContentSize:CGSizeMake((overallWidth + padding), self.frame.size.height)];
 	[self selectTabAtIndex:0];
 	[self updateFaders];
