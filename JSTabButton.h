@@ -8,7 +8,7 @@
 #import <UIKit/UIKit.h>
 
 @interface JSTabButton : UIButton {
-
+    
 	BOOL _toggled;
 	
 	UIImage *_normalBg;
@@ -20,6 +20,6 @@
 @property (nonatomic, retain) UIImage *normalBg;
 @property (nonatomic, retain) UIImage *highlightedBg;
 
-+ (JSTabButton *)tabButtonWithTitle:(NSString *)string;
++ (JSTabButton *)tabButtonWithTitle:(NSString *)string andColor:(UIColor*)color andTextColor:(UIColor*)textColor;
 
 @end

@@ -26,7 +26,7 @@ typedef enum {
 @end
 
 @interface JSScrollableTabBar : UIView <UIScrollViewDelegate> {
-
+    
 	UIScrollView *_scrollView;
 	
 	NSMutableArray *_tabItems;
@@ -47,6 +47,5 @@ typedef enum {
 
 - (id)initWithFrame:(CGRect)frame style:(JSScrollableTabBarStyle)style;
 - (void)setTabItems:(NSArray *)tabItems;
-- (void)selectTabAtIndex:(NSInteger)index;
 
 @end
