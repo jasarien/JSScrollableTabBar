@@ -43,7 +43,7 @@
 	
 	for (int i = 0; i < 25; i++)
 	{
-		JSTabItem *item = [[JSTabItem alloc] initWithTitle:[NSString stringWithFormat:@"Item %d", i]];
+		JSTabItem *item = [[JSTabItem alloc] initWithTitle:[NSString stringWithFormat:@"Item %d", i] andColor:nil andTextColor:nil];
 		[items addObject:item];
 		[item release];
 	}
