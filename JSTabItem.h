@@ -22,6 +22,6 @@
 @property (nonatomic, copy) UIColor *textColor;
 
 
-- (id)initWithTitle:(NSString *)title andColor:(UIColor*)color andTextColor:(UIColor*)textColor;
+- (id)initWithTitle:(NSString *)title color:(UIColor*)color textColor:(UIColor*)textColor;
 
 @end

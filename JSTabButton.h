@@ -20,6 +20,6 @@
 @property (nonatomic, retain) UIImage *normalBg;
 @property (nonatomic, retain) UIImage *highlightedBg;
 
-+ (JSTabButton *)tabButtonWithTitle:(NSString *)string andColor:(UIColor*)color andTextColor:(UIColor*)textColor;
++ (JSTabButton *)tabButtonWithTitle:(NSString *)string color:(UIColor*)color textColor:(UIColor*)textColor;
 
 @end

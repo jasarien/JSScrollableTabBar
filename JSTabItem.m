@@ -15,7 +15,7 @@
 @synthesize color = _color;
 @synthesize textColor = _textColor;
 
-- (id)initWithTitle:(NSString *)title andColor:(UIColor*)color andTextColor:(UIColor *)textColor;
+- (id)initWithTitle:(NSString *)title color:(UIColor*)color textColor:(UIColor *)textColor;
 {
 	if ((self = [super init]))
 	{

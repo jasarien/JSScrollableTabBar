@@ -14,7 +14,7 @@
 @synthesize normalBg = _normalBg;
 @synthesize highlightedBg = _highlightedBg;
 
-+ (JSTabButton *)tabButtonWithTitle:(NSString *)string andColor:(UIColor*)color andTextColor:(UIColor*)textColor
++ (JSTabButton *)tabButtonWithTitle:(NSString *)string color:(UIColor*)color textColor:(UIColor*)textColor
 {	
 	NSString *imageBundlePath = [[[NSBundle mainBundle] bundlePath] stringByAppendingPathComponent:@"images.bundle"];
 	NSBundle *imageBundle = [NSBundle bundleWithPath:imageBundlePath];

@@ -130,7 +130,7 @@
 	
 	for (JSTabItem *item in _tabItems)
 	{
-		JSTabButton *tabButton = [JSTabButton tabButtonWithTitle:[item title] andColor:[item color] andTextColor:[item textColor]];
+		JSTabButton *tabButton = [JSTabButton tabButtonWithTitle:[item title] color:[item color] textColor:[item textColor]];
 		[tabButton setTag:[_tabItems indexOfObject:item]];
 		[tabButton addTarget:self
 					  action:@selector(tabSelected:)
